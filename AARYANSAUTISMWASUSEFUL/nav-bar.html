@@ -1,0 +1,23 @@
+<div class="navbar-container">
+  <div class="menu-toggle" id="menuToggle">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav class="navbar" id="navbar">
+    <a href="../HOME/index.html">Home</a>
+    <a href="../events2.1/index.html">Events</a>
+    <a href="../legacy2/legacyindex.html">Legacy</a>
+    <a href="../rules v2/index.html">Rules</a>
+    <a href="../contacts v4/contacts_updated.html">Contacts</a>
+  </nav>
+</div>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navbar = document.getElementById('navbar');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('show');
+  });
+</script>

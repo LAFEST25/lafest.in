@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAFEST</title>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="rules.css">
+  <link rel="stylesheet" href="../common-navbar.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Animation Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  
+</head>
+<body>
+  <div class="navbar-container">
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </button>
+    <nav class="navbar">
+      <a href="../HOME/index.html">HOME</a>
+      <a href="../events2.1/index.html">EVENTS</a>
+      <a href="index.html" class="active">RULES</a>
+      <a href="../legacy2/legacyindex.html">LEGACY</a>
+      <a href="../contacts v4/contacts_updated.html">CONTACTS</a>
+    </nav>
+  </div>
+  
+  <!-- Rules Tabs Section -->
+  <section class="rules-tabs section-dark">
+    <div class="container glassmorphic">
+      <div class="section-header">
+        <h2 class="section-title">RULES</h2>
+        <div class="section-underline"></div>
+      </div>
+      
+      <div class="tabs-container">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="general-rules">General Rules</button>
+        </div>
+        
+        <div class="tabs-content">
+          <div class="tab-pane active" id="general-rules">
+            <div class="cyber-box glassmorphic-high">
+              <div class="cyber-box-corner tl"></div>
+              <div class="cyber-box-corner tr"></div>
+              <div class="cyber-box-corner bl"></div>
+              <div class="cyber-box-corner br"></div>
+              
+              <h3>General Rules & Regulations</h3>
+              
+              <ul class="rules-list">
+                <li>
+                  <div class="rule-icon"><i class="fas fa-check-circle"></i></div>
+                   <p>1. Registration is free of cost and open exclusively to students of Classes IX to XII from participating schools.<br>
+        2. All completed registration forms should be submitted by 20th June,2025.<br>
+        3. All participants should report by 7:00 am on the day of the fest.<br>
+        4. Each school may bring a maximum of 50 non-participating attendees.<br>
+        5. Each registered school is required to participate in a minimum of three events. Individual students may not participate in more than two events.<br>
+        6. All attendees must wear their school uniforms and display their LA Fest badges at all times, regardless of their participation status. Badges will be issued at the registration desk.<br>
+        7. Entry is restricted to registered students and their accompanying teachers only.<br>
+        8. Each school will be allotted two green rooms for preparation and storage.<br>
+        9. Food coupons, priced at 350 each, are non-refundable.<br>
+        10. All orders, including vegetarian/non-vegetarian preferences, must be confirmed by 20th June,2025.<br>
+        Changes will not be entertained beyond this deadline.<br>
+        11. While students may carry mobile phones, usage is strictly prohibited inside the indoor stadium.<br>
+        12. Food and beverages are not allowed inside the indoor stadium under any circumstances.<br>
+        13. All decisions made by the judges will be final.<br>
+        14. Participating schools are expected to uphold the highest standards of sportsmanship and fair play. Any form of vulgar language, obscene actions, or disruptive behaviour will result in immediate disqualification.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navbar = document.querySelector('.navbar');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('show');
+  });
+</script>
+</body>
+</html>

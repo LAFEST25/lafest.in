@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HOME</title>
+  <link rel="stylesheet" href="styles1.css" />
+  <link rel="stylesheet" href="../common-navbar.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: rgb(3, 3, 3);
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: none;
+    }
+    #desktop-iframe {
+      display: block;
+    }
+    #mobile-iframe {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: calc(50% - 60px);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      z-index: 9999;
+    }
+    @media (max-width: 780px) {
+      #desktop-iframe {
+        display: none;
+      }
+      #mobile-iframe {
+        display: block;
+      }
+    }
+    
+    #register-button {
+      position: fixed;
+      bottom: 25px;
+      left: 93.5%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      width: 170px;
+      height: 40px;
+      font-size: 13px;
+      color: white;
+      box-shadow: 0 0 15px white, 0 0 30px white;
+      border: 1px solid white;
+      border-radius: 50px; /* Capsule shape */
+      background-color: transparent;
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+    #register-button:hover {
+      box-shadow: 0 0 25px white, 0 0 50px white;
+    }
+  </style>
+</head>
+<body class="home">
+  <div id="custom-cursor"></div>
+  <div class="navbar-container">
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </button>
+    <nav class="navbar">
+      <a href="../HOME/index.html">HOME</a>
+      <a href="../events2.1/index.html">EVENTS</a>
+      <a href="../rules v2/index.html">RULES</a>
+      <a href="../legacy2/legacyindex.html">LEGACY</a>
+      <a href="../contacts v4/contacts_updated.html">CONTACTS</a>
+    </nav>
+  </div>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('show');
+    });
+  </script>
+  <div style="padding-top: 0;"></div>
+
+  <iframe id="desktop-iframe" src='https://my.spline.design/prismcoin-QX0dWpy5FBnckvf0zgvUPFHC/' title="Spline 3D Application"></iframe>
+  <iframe id="mobile-iframe" src='https://my.spline.design/prismcoinmobile-niaUhTGvLCFKNWnFF6sq1Be2/' title="Spline 3D Application Mobile"></iframe>
+  <script>
+    // Prevent context menu globally except on buttons
+    document.addEventListener('contextmenu', function (e) {
+      if (!e.target.closest('button')) {
+        e.preventDefault();
+      }
+    });
+    // Disable scroll and zoom (mouse wheel and touchpad)
+    window.addEventListener('wheel', function (e) {
+      e.preventDefault();
+    }, { passive: false });
+    // Disable zoom via Ctrl + Scroll
+    window.addEventListener('keydown', function (e) {
+      if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=')) {
+        e.preventDefault();
+      }
+    });
+    // Disable pinch zoom on touch devices
+    window.addEventListener('touchmove', function (e) {
+      if (e.scale !== 1) e.preventDefault();
+    }, { passive: false });
+  </script>
+  <script>
+    // Custom cursor script
+    const cursor = document.getElementById('custom-cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        cursor.classList.add('hovered');
+      });
+      link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hovered');
+      });
+    });
+
+    // Show alert on register button click
+    const registerButton = document.getElementById('register-button');
+    registerButton.addEventListener('click', () => {
+      // Create popup div
+      const popup = document.createElement('div');
+      popup.textContent = 'Coming soon';
+      popup.style.position = 'fixed';
+      popup.style.top = '50%';
+      popup.style.left = '50%';
+      popup.style.transform = 'translate(-50%, -50%)';
+      popup.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+      popup.style.color = 'white';
+      popup.style.padding = '20px 40px';
+      popup.style.borderRadius = '10px';
+      popup.style.boxShadow = '0 0 15px white';
+      popup.style.zIndex = '10000';
+      popup.style.fontSize = '18px';
+      popup.style.textAlign = 'center';
+      popup.style.userSelect = 'none';
+
+      // Append popup to body
+      document.body.appendChild(popup);
+
+      // Remove popup after 2 seconds
+      setTimeout(() => {
+        if (popup && popup.parentNode) {
+          popup.parentNode.removeChild(popup);
+        }
+      }, 2000);
+    });
+  </script>
+  <button class="glow-button" id="register-button">Register</button>
+</body>
+</html>

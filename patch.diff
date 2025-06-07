@@ -1,0 +1,27 @@
+======= 
+  <link rel="stylesheet" href="rules.css">
+  <link rel="stylesheet" href="../common-navbar.css">
+>>>>>>> REPLACE
+
+<<<<<<< SEARCH
+<body>
+  <!-- Rules Tabs Section -->
+  <section class="rules-tabs section-dark">
+======= 
+<body>
+  <div class="navbar-container">
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </button>
+    <nav class="navbar">
+      <a href="../HOME/index.html">HOME</a>
+      <a href="../events2.1/index.html">EVENTS</a>
+      <a href="index.html" class="active">RULES</a>
+      <a href="../legacy2/legacyindex.html">LEGACY</a>
+      <a href="../contacts v4/contacts_updated.html">CONTACTS</a>
+    </nav>
+  </div>
+  <!-- Rules Tabs Section -->
+  <section class="rules-tabs section-dark">
