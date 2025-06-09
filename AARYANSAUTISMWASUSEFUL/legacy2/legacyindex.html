@@ -129,7 +129,7 @@
     }
   </style>
 </head>
-<body>
+<body class="legacy-page">
   <div id="nav-placeholder"></div>
   <div style="padding-top: 70px;"></div>
   <script>
@@ -139,10 +139,10 @@
         document.getElementById('nav-placeholder').innerHTML = data;
       });
   </script>
-  <video id="background-video" autoplay muted>
+  <video id="background-video" autoplay muted controlsList="nodownload nofullscreen noremoteplayback" disableRemotePlayback>
     <source src="video/vid1.mp4" type="video/mp4">
   </video>
-  <video id="loop-video" style="display:none;" autoplay muted loop>
+  <video id="loop-video" style="display:none;" autoplay muted loop controlsList="nodownload nofullscreen noremoteplayback" disableRemotePlayback>
     <source src="video/vid2.mp4" type="video/mp4">
   </video>
 
