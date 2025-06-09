@@ -192,7 +192,7 @@
       <p>Fr Dr SALVIN AUGUSTINE SJ</p>
       <p>
         +91 9544115903
-        <button class="copy-btn" onclick="copyToClipboard('34565656', this)">Copy</button>
+        <button class="copy-btn" onclick="copyToClipboard('+91 9544115903', this)">Copy</button>
       </p>
     </div>
     <div class="glass-card larger">
@@ -200,7 +200,7 @@
       <p>Fr RAMLAT THOMAS SJ</p>
       <p>
         +91 9497736577
-        <button class="copy-btn" onclick="copyToClipboard('5676766', this)">Copy</button>
+        <button class="copy-btn" onclick="copyToClipboard('+91 9497736577', this)">Copy</button>
       </p>
     </div>
     <div class="glass-card larger">
@@ -208,7 +208,7 @@
       <p>Sr JIJI THOMAS</p>
       <p>
         +91 9496221898
-        <button class="copy-btn" onclick="copyToClipboard('566567', this)">Copy</button>
+        <button class="copy-btn" onclick="copyToClipboard('+91 94962218987', this)">Copy</button>
       </p>
     </div>
     <div class="glass-card">
@@ -375,6 +375,41 @@
     menuToggle.addEventListener('click', () => {
       navbar.classList.toggle('show');
     });
+  </script>
+  <script>
+    function copyToClipboard(phoneNumber, button) {
+      if (!navigator.clipboard) {
+        // Clipboard API not available, fallback
+        const textArea = document.createElement('textarea');
+        textArea.value = phoneNumber;
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+          document.execCommand('copy');
+          showCopyFeedback(button);
+        } catch (err) {
+          alert('Failed to copy phone number');
+        }
+        document.body.removeChild(textArea);
+        return;
+      }
+      navigator.clipboard.writeText(phoneNumber).then(() => {
+        showCopyFeedback(button);
+      }, () => {
+        alert('Failed to copy phone number');
+      });
+    }
+
+    function showCopyFeedback(button) {
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.disabled = true;
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.disabled = false;
+      }, 1500);
+    }
   </script>
   <footer style="text-align:center; padding: 1rem 0; color: white; font-family: 'Orbitron', sans-serif; font-weight: 500; background: rgba(0, 0, 0, 0.6); width: 100%; z-index: 5;">
    &copy; ALL RIGHTS RESERVED JESSE
