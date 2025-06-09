@@ -39,6 +39,75 @@ body {
   box-shadow: 0 0 10px white, 0 0 20px white; /* Glow effect for border */
 }
 
+.events-page .navbar {
+  border-color: #9900ff;
+  box-shadow: 0 0 10px #9900ff, 0 0 20px #9900ff;
+}
+
+.navbar:hover {
+  padding: 16px 32px;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px white, 0 0 50px white, 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.events-page .navbar:hover {
+  box-shadow: 0 0 25px #9900ff, 0 0 50px #9900ff, 0 0 10px rgba(153, 0, 255, 0.5);
+}
+
+.navbar a:hover {
+  transform: scale(1.3);
+  text-shadow: 0 0 10px white, 0 0 20px white;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+.events-page .navbar a:hover {
+  text-shadow: 0 0 10px #9900ff, 0 0 20px #9900ff;
+  box-shadow: 0 0 30px rgba(153, 0, 255, 0.6);
+}
+
+.legacy-page .navbar {
+  border-color: #9900ff;
+  box-shadow: 0 0 10px #9900ff, 0 0 20px #9900ff;
+}
+
+.legacy-page .navbar:hover {
+  box-shadow: 0 0 25px #9900ff, 0 0 50px #9900ff, 0 0 10px rgba(153, 0, 255, 0.5);
+}
+
+.legacy-page .navbar a:hover {
+  text-shadow: 0 0 10px #9900ff, 0 0 20px #9900ff;
+  box-shadow: 0 0 30px rgba(153, 0, 255, 0.6);
+}
+
+.rules-page .navbar {
+  border-color: #9900ff;
+  box-shadow: 0 0 10px #9900ff, 0 0 20px #9900ff;
+}
+
+.rules-page .navbar:hover {
+  box-shadow: 0 0 25px #9900ff, 0 0 50px #9900ff, 0 0 10px rgba(153, 0, 255, 0.5);
+}
+
+.rules-page .navbar a:hover {
+  text-shadow: 0 0 10px #9900ff, 0 0 20px #9900ff;
+  box-shadow: 0 0 30px rgba(153, 0, 255, 0.6);
+}
+
+.contacts-page .navbar {
+  border-color: #9900ff;
+  box-shadow: 0 0 10px #9900ff, 0 0 20px #9900ff;
+}
+
+.contacts-page .navbar:hover {
+  box-shadow: 0 0 25px #9900ff, 0 0 50px #9900ff, 0 0 10px rgba(153, 0, 255, 0.5);
+}
+
+.contacts-page .navbar a:hover {
+  text-shadow: 0 0 10px #9900ff, 0 0 20px #9900ff;
+  box-shadow: 0 0 30px rgba(153, 0, 255, 0.6);
+}
+
 /* Matrix Dot Background */
 .navbar::after {
   content: '';
