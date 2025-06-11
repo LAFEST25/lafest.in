@@ -142,37 +142,14 @@
       });
     });
 
-    // Show alert on register button click
-    const registerButton = document.getElementById('register-button');
-    registerButton.addEventListener('click', () => {
-      // Create popup div
-      const popup = document.createElement('div');
-      popup.textContent = 'Coming soon';
-      popup.style.position = 'fixed';
-      popup.style.top = '50%';
-      popup.style.left = '50%';
-      popup.style.transform = 'translate(-50%, -50%)';
-      popup.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-      popup.style.color = 'white';
-      popup.style.padding = '20px 40px';
-      popup.style.borderRadius = '10px';
-      popup.style.boxShadow = '0 0 15px white';
-      popup.style.zIndex = '10000';
-      popup.style.fontSize = '18px';
-      popup.style.textAlign = 'center';
-      popup.style.userSelect = 'none';
-
-      // Append popup to body
-      document.body.appendChild(popup);
-
-      // Remove popup after 2 seconds
-      setTimeout(() => {
-        if (popup && popup.parentNode) {
-          popup.parentNode.removeChild(popup);
-        }
-      }, 2000);
+    document.addEventListener('DOMContentLoaded', () => {
+      // Redirect to registration page on register button click
+      const registerButton = document.getElementById('register-button');
+      registerButton.addEventListener('click', () => {
+        window.location.href = 'https://lafest-reg.vercel.app';
+      });
     });
   </script>
- 
+  <button class="glow-button" id="register-button">REGISTER</button>
 </body>
 </html>
